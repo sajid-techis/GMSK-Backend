@@ -27,7 +27,8 @@ class Admission_form(models.Model):
     mother = models.CharField('Mother Name',max_length=100, db_index=True, blank=True, null = True )
     gaurdian = models.CharField('Gaurdian Name',max_length=100, db_index=True, blank=True, null = True )
     adhaar = models.IntegerField('Aadhar', blank = False, null = False)
-    domicile = models.IntegerField('Domicile Number', blank = False, null = False)
+    domicile = models.IntegerField('Domicile Number', blank = True, null = True)
+    bank= models.IntegerField('Bank Account Number',blank=True,null=True)
     photograph = CloudinaryField(
         'Photo', blank = True, null = True
     )
